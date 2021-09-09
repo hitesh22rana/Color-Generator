@@ -5,6 +5,11 @@ let bodybg = document.getElementById("body-bg");
 
 
 red.oninput = () => {
+    if(red.value < 0) {
+        red.value = 0;
+        red.innerHTML = red.value;
+    }
+
     if(red.value > 255) {
         red.value = Math.floor(red.value / 10);
         red.innerHTML = red.value;
@@ -23,6 +28,11 @@ red.oninput = () => {
 };
 
 green.oninput = () => {
+    if(green.value < 0) {
+        green.value = 0;
+        green.innerHTML = green.value;
+    }
+
     if(green.value > 255) {
         green.value = Math.floor(green.value / 10);
         green.innerHTML = green.value;
@@ -41,6 +51,11 @@ green.oninput = () => {
 };
 
 blue.oninput = () => {
+    if(blue.value < 0) {
+        blue.value = 0;
+        blue.innerHTML = blue.value;
+    }
+
     if(blue.value > 255) {
         blue.value = Math.floor(blue.value / 10);
         blue.innerHTML = blue.value;
